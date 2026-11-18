@@ -1,0 +1,60 @@
+\documentclass[11pt,openany]{book}
+
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{ctex}
+
+\usepackage{amsmath,amssymb,amsthm}
+
+\usepackage{tikz}
+\usepackage{xcolor}
+
+\usepackage[colorlinks=true,linkcolor=blue!60!black,urlcolor=blue!60!black]{hyperref}
+
+\title{Some Mathematical Thinking}
+\author{Zisheng Guo}
+\date{\today}
+
+\begin{document}
+	\frontmatter
+	\begin{titlepage}
+		\begin{tikzpicture}[remember picture, overlay]
+			\fill[blue!8]
+			(current page.north west) rectangle
+			([yshift=-5cm]current page.north east);
+			\draw[blue!45, line width=1.2pt]
+			([yshift=-5cm]current page.north west) --
+			([yshift=-5cm]current page.north east);
+			\fill[blue!35]
+			(current page.south west) rectangle
+			([yshift=0.8cm]current page.south east);
+		\end{tikzpicture}
+		
+		\centering
+		\vspace*{6.5cm}
+		
+		{\Huge\bfseries Some Mathematical Thinking\par}
+		
+		\vspace{0.8cm}
+		\rule{0.45\textwidth}{0.6pt}\par
+		\vspace{0.8cm}
+		
+		{\Large\itshape Thoughts on How Mathematicians Think\par}
+		
+		\vfill
+		
+		{\large Zisheng Guo\par}
+		\vspace{0.4cm}
+		{\large \today\par}
+		
+		\vspace*{2.5cm}
+	\end{titlepage}
+	
+	% ---------- 目录 ----------
+	\tableofcontents
+	
+	% ---------- 正文 ----------
+	\mainmatter
+	
+	\include{chapters/ch01}
+
+\end{document}
